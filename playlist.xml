@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href = "xmlstyle.css" ?>
+
+<playlist>
+<heading>sadgirl pan</heading>
+<song>
+	<title>Drown</title>
+	<artist>
+		<artist1>
+			<firstname>Martin</firstname>
+			<lastname>Garrix</lastname>
+		</artist1>
+		<artist2>
+			<firstname>Clinton</firstname>
+			<lastname>Kane</lastname>
+		</artist2>
+	</artist>
+	<genre>House</genre>
+	<year>2020</year>		
+</song>
+
+<song>
+	<title>Undrunk</title>
+	<artist>FLETCHER</artist>
+	<genre>Pop</genre>
+	<year>2019</year>		
+</song>
+		
+<song>
+	<title>The Love You Left Behind</title>
+	<artist>
+		<firstname>Michael</firstname>
+		<lastname>Schulte</lastname>
+	</artist>
+	<genre>Pop</genre>
+	<year>2019</year>		
+</song>
+		
+<song>
+	<title>100 Degrees</title>
+	<artist>
+		<firstname>Rich</firstname>
+		<lastname>Brian</lastname>
+	</artist>
+	<genre>Hip Hop</genre>
+	<year>2019</year>		
+</song>
+		
+<song>
+	<title>Guilty Pleasure</title>
+	<artist>
+		<firstname>Bryce</firstname>
+		<lastname>Vine</lastname>
+	</artist>
+	<genre>Indie</genre>
+	<year>2014</year>		
+</song>
+		
+<song>
+	<title>Love is Gone</title>
+	<artists>
+		<artist>SLANDER</artist>
+		<artist>
+			<firstname>Dylan</firstname>
+			<lastname>Matthew</lastname>
+		</artist>
+	</artists>
+	<genre>Electronic</genre>
+	<year>2019</year>		
+</song>
+		
+<song>
+	<title>Put Your Records On</title>
+	<artist>
+		<firstname>Corinne</firstname>
+		<middlename>Bailey</middlename>
+		<lastname>Rae</lastname>
+	</artist>
+	<genre>R&amp;B</genre>
+	<year>2006</year>		
+</song>
+
+<song>
+	<title>Sorry</title>
+	<artist>The Rose</artist>
+	<genre>Rock</genre>
+	<year>2017</year>		
+</song>
+
+<song>
+	<title>Goodbye Song</title>
+	<artist>MKTO</artist>
+	<genre>Pop Rap</genre>
+	<year>2014</year>		
+</song>
+		
+<song>
+	<title>Happier</title>
+	<artist>
+		<artist1>Marshmello</artist1>
+		<artist2>Bastille</artist2>
+	</artist>
+	<genre>Electronic</genre>
+	<year>2018</year>		
+</song>
+
+</playlist>
+
