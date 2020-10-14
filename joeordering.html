@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<title>Joe's Hot Dogs</title>
+</head>
+	
+<body>
+	<h1> Welcome to Joe's Hotdogs!</h1>
+	<img src="joehotdog.png" alt="Joe's Hotdogs" width="50%">
+	<br>
+	<h3> Your Order:</h3>
+<script>
+	function listorder(x, y, z){
+		if (x>1){
+			document.write(x + " hotdogs");
+			document.write("<br>");
+		}
+		else if (x==1){
+			document.write(x + " hotdog");
+			document.write("<br>");
+		}
+		
+		if (y>0){
+			document.write(y + " fries");
+			document.write("<br>");
+		}
+		
+		if (z>1){
+			document.write(z + " sodas");
+			document.write("<br>");
+		}
+		else if (z==1){
+			document.write(z + " soda");
+			document.write("<br>");
+		}
+	}
+	
+	function subtotal(x,y,z){
+		x = x*3.25;
+		y = y*2;
+		z = z*1.5;
+		total = (x+y+z);
+		document.write("Your subtotal is: $" + total);
+		document.write("<br>");
+		return total;
+	}
+	
+	function discount(x){
+		if (x>=20) {
+			x = x*.9;
+			document.write("Yay! You qualified for a discount. Your new total is: $" + x)
+			document.write("<br>");
+		}
+		return x;
+	}
+	
+	function tax(x){
+		x = (x*.065)
+		document.write("Your tax is: $" + x)
+		document.write("<br>");
+		return x;
+	}
+	
+	var hotdogs = prompt("How many hotdogs would you like?" , "");
+	var fries = prompt("How many fries would you like?", "");
+	var sodas = prompt("How many sodas would you like?", "");
+	
+	listorder(hotdogs,fries,sodas);
+	document.write("<br>");
+	total = discount(subtotal(hotdogs, fries, sodas));
+	total = total + tax(total);
+	document.write("Your total is: $" + total);
+
+</script>
+
+</body>
+</html>
