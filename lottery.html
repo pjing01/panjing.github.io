@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<title>Quick Pick</title>
+</head>
+	
+<body>
+	<h1>Lottery</h1>
+<script>
+	function quickPick(lottoNumbers){
+		for (i = 0; i < 5; i++){
+			lottoNumbers[i] = Math.ceil((Math.random()*48));
+		}
+	}			
+	function pickLuckyNumber(luckyNumber){
+		luckyNumber = Math.ceil((Math.random()*18));
+		return luckyNumber;
+	}
+				
+	function compareNumbers(winningNumbersArr,winningLuckyNumber,lottoNumbers,luckyNumber){
+		var counter = 0;
+		var luckyCounter = 0;
+		for (i = 0; i < 5; i++){
+			for (j = 0; j < 5; j++){
+				if (winningNumbersArr[j] == lottoNumbers[i]){
+					counter = counter + 1;
+				}
+			}
+		}
+		if (winningLuckyNumber == luckyNumber){
+			luckyCounter = 1;
+		}
+			
+		switch(counter) {
+			case 0:
+				if(luckyCounter == 0){
+					document.write("You lost sorry! None of your numbers matched.");
+					} 
+				else {
+					document.write("You won $4! None of your numbers matched but your lucky ball number matched!");
+				}
+				break;
+			case 1:
+				if(luckyCounter == 0){
+					document.write("You lost sorry! One of your numbers matched but you didn't win anything");
+				} 
+				else {
+					document.write("You won $6! One of your numbers and your lucky ball number matched!");
+				}
+				break;
+			case 2:	
+				if(luckyCounter == 0){
+					document.write("You won $3! Two of your numbers matched!");
+				} 
+				else {
+					document.write("You won $25! Two of your numbers and your lucky ball number matched!");
+				}
+				break;
+			case 3:
+				if(luckyCounter == 0){
+					document.write("You won $20! Three of your numbers matched!");
+				} 
+				else {
+					document.write("You won $150! Three of your numbers and your lucky ball number matched!");
+				}
+				break;
+			case 4:
+				if(luckyCounter == 0){
+					document.write("You won $200! Four of your numbers matched!");
+				} 
+				else {
+					document.write("You won $5000! Four of your numbers and your lucky ball number matched!");
+				}
+				break;
+			case 5:
+				if(luckyCounter == 0){
+					document.write("You won $25,000 a YEAR for LIFE! All five of your numbers matched!");
+				} 
+				else {
+					document.write("You won $7,000 a WEEK for LIFE! All five of your numbers and your lucky ball number matched!");
+				}
+				break;
+		}
+	}
+
+	var lottoNumbers = [];
+    var luckyNumber = 1;
+    quickPick(lottoNumbers);
+    var randoNum = pickLuckyNumber(luckyNumber);
+    lottoNumbers.sort(function(a,b){return a-b});
+    var winningNumbers = prompt("Insert the winning numbers with a space between: ", "");
+    var winningLuckyNumber = prompt("Insert the winning lucky ball number:","");
+    var winningNumbersArr = [];
+    winningNumbersArr = winningNumbers.split(",");
+	winningNumbersArr.sort(function(a,b){return a-b});
+	document.write("The quick pick numbers are: " + lottoNumbers);
+	document.write("<br>");
+    document.write("The lucky ball number is: " + randoNum);
+	document.write("<br><br>");
+	document.write("The winning numbers are: " + winningNumbersArr);
+	document.write("<br>");
+    document.write("The lucky ball number is: " + winningLuckyNumber);
+	document.write("<br><br>");
+    compareNumbers(winningNumbersArr,winningLuckyNumber,lottoNumbers,luckyNumber);
+		
+</script>
+</body>
+</html>
