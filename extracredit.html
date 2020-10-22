@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Magic Text </title>
+	<script>
+		window.onload=function(){
+			document.getElementById("button").addEventListener("click",
+				function() {
+					current_val = document.getElementById("button").value;
+					if (current_val == "<-"){
+						document.getElementById("button").setAttribute("value", "->");
+						text_copy = document.getElementById("right").value;
+						document.getElementById("right").value = "";
+						document.getElementById("left").value = text_copy;
+					} else {
+						document.getElementById("button").setAttribute("value", "<-");
+						text_copy = document.getElementById("left").value;
+						document.getElementById("left").value = "";
+						document.getElementById("right").value = text_copy;
+					}});
+			}
+	</script>
+	
+</head>
+	
+	
+<body>
+	<table>
+		<tr>
+			<td><input type="text" id="left" name="left"/></td>
+			<td><input type="button" id = "button" value="->"/></td>
+			<td><input type="text" id="right" name="right"/></td>
+		</tr>
+	</table>
+</body>
+</html>
